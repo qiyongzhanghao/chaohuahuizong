@@ -1,2 +1,2 @@
 # chaohuahuizong
-超化汇总
+超话汇总
