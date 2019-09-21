@@ -5,33 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-</head>
-<body onload="openMultiple()">
-    <h1>批量弹出超话</h1>
     <script>
-     function openMultiple(){
-         window.open('https://weibo.com/p/100808b68aba47f332d118ad655dcfa1029afc/super_index','陈一发儿','','true')
-         window.open('https://weibo.com/p/100808b2579ee456d56680adc9575bf58b9208/super_index','发酱小橘猫','','true')
-         window.open('https://weibo.com/p/100808b5aa2f6b90f769fe544169396fc8d180/super_index','辣个女人','','true')
-         window.open('https://weibo.com/p/1008088e3dd74c88563ae6b3447501db5966f1/super_index','发酱67373','','true')
-         window.open('https://weibo.com/p/1008087b1ac0beba3f6f93e6e9a48b2d20201f/super_index','陈一发','','true')
-         window.open('https://www.jkforum.net/home.php?mod=spacecp&ac=credit&op=log&suboperation=creditrulelog','jkf论坛','','true') //用来每天刷积分
-         window.open('https://weibo.com/p/10080864eeb6f3ab98373047830332d05637dd/super_index','傲娇小九九','','true')
-         window.open('https://weibo.com/p/100808bfd55141d3b53c88efc0f922051d87e2/super_index','赵小臭','','true')
-         window.open('https://weibo.com/p/10080850b1c3b64e5545118a102f555513c8e2/super_index','女流','','true')
-         window.open('https://weibo.com/p/1008088d19d9c221b0a70b8dd8ba1ada265499/super_index','丁浅浅','','true')
-         window.open('https://weibo.com/p/100808d147a0a2d69164f57f9ef029e0d55da1/super_index','67373时装部','','true')
-         window.open('https://weibo.com/p/100808e657ebc41806de1979228529f38a7f7b/super_index','2019爱发依旧','','true')
-         window.open('https://weibo.com/p/1008083379fe3ab207c2561cd132fb232ed3c7/super_index','美图部圣诞活动','','true')
-         window.open('https://weibo.com/p/1008082aa36c591452aec937cfbe82b51c1f1e/super_index','我的最爱陈一发儿','','true')
-         window.open('https://weibo.com/p/10080882a42a1732de4eb2b76a1994b27fff95/super_index','我心目中最美的发发','','true')
-         window.open('https://weibo.com/p/10080802ead2cb2940234d19721ceb00e3355e/super_index','陈一发儿1013生日快乐','','true')
-         window.open('https://weibo.com/p/1008087dacd05fef6206a87b68c21a5ab7f489/super_index','弦上有春秋','','true')
-         window.open('https://weibo.com/p/100808c9bf185bddd18c52092ca1528b4d683a/super_index','老痰酸菜面儿','','true')
-         window.open('https://weibo.com/p/100808b2d50ed759608fd801d8a7e6d2b3092b/super_index','木木男孩','','true')
-         window.open('https://weibo.com/p/10080834e2abba64672dec6b80650dfa800cd9/super_index','石陈大海','','true')
-         // window.open('','','','true')
-     }
+    window.onload=function ()
+    {
+        var aChaoHuaList=
+        [
+            ['陈一发儿','https://weibo.com/p/100808b68aba47f332d118ad655dcfa1029afc/super_index',1],
+            ['发酱小橘猫','https://weibo.com/p/100808b2579ee456d56680adc9575bf58b9208/super_index',1],
+            ['辣个女人','https://weibo.com/p/100808b5aa2f6b90f769fe544169396fc8d180/super_index',1],
+            ['发酱67373','https://weibo.com/p/1008088e3dd74c88563ae6b3447501db5966f1/super_index',1],
+            ['陈一发','https://weibo.com/p/1008087b1ac0beba3f6f93e6e9a48b2d20201f/super_index',1],
+            ['jkf论坛','https://www.jkforum.net/home.php?mod=spacecp&ac=credit&op=log&suboperation=creditrulelog',1], //刷每天登录的积分用的
+            ['傲娇小九九','https://weibo.com/p/10080864eeb6f3ab98373047830332d05637dd/super_index',0],
+            ['赵小臭','https://weibo.com/p/100808bfd55141d3b53c88efc0f922051d87e2/super_index',0],
+            ['女流','https://weibo.com/p/10080850b1c3b64e5545118a102f555513c8e2/super_index',0],
+            ['丁浅浅','https://weibo.com/p/1008088d19d9c221b0a70b8dd8ba1ada265499/super_index',0],
+            ['67373时装部','https://weibo.com/p/100808d147a0a2d69164f57f9ef029e0d55da1/super_index',0],
+            ['2019爱发依旧','https://weibo.com/p/100808e657ebc41806de1979228529f38a7f7b/super_index',0],
+            ['美图部圣诞活动','https://weibo.com/p/1008083379fe3ab207c2561cd132fb232ed3c7/super_index',0],
+            ['我的最爱陈一发儿','https://weibo.com/p/1008082aa36c591452aec937cfbe82b51c1f1e/super_index',0],
+            ['我心目中最美的发发','https://weibo.com/p/10080882a42a1732de4eb2b76a1994b27fff95/super_index',0],
+            ['陈一发儿1013生日快乐','https://weibo.com/p/10080802ead2cb2940234d19721ceb00e3355e/super_index',0],
+            ['弦上有春秋','https://weibo.com/p/1008087dacd05fef6206a87b68c21a5ab7f489/super_index',0],
+            ['老痰酸菜面儿','https://weibo.com/p/100808c9bf185bddd18c52092ca1528b4d683a/super_index',0],
+            ['木木男孩','https://weibo.com/p/100808b2d50ed759608fd801d8a7e6d2b3092b/super_index',0],
+            ['石陈大海','https://weibo.com/p/10080834e2abba64672dec6b80650dfa800cd9/super_index',0],
+        ];
+
+        var ilength = aChaoHuaList.length;
+        var oChaoHuaList=document.getElementById('chaohualist');
+        //aChaoHuaList=aChaoHuaList.reverse();        
+
+        for(i=0;i<ilength;i++){
+            var oChaoHuaLink = document.createElement('div');
+            oChaoHuaLink.innerHTML += "<input class='opencheck' type='checkbox' name='"+aChaoHuaList[i][0]+"' value='"+aChaoHuaList[i][0]+"' "+(aChaoHuaList[i][2]?'checked':'')+">";            
+            oChaoHuaLink.innerHTML += "<a href='"+aChaoHuaList[i][1]+"' target='"+aChaoHuaList[i][0]+"'>"+aChaoHuaList[i][0]+"</a></br>";
+            oChaoHuaList.appendChild(oChaoHuaLink);            
+        }; 
+        
+        var oTanChu=document.getElementById('tanchu');
+
+        oTanChu.onclick=function ()
+        {
+            var oCheckbox = getElementsByClass('opencheck');
+            for(i=0;i<ilength;i++)
+            {
+                window.open(aChaoHuaList[i][1],aChaoHuaList[i][0],'','true');
+            };
+        };        
+    };
     </script>
+</head>
+<body>
+    <p>本页面链接：<a href="https://qiyongzhanghao.github.io/chaohuahuizong/">https://qiyongzhanghao.github.io/chaohuahuizong</a></p>
+    <h3><a id='tanchu' href='javascript:;'>点击此处</a>批量弹出以下打钩的超话：</h3></br>
+    <!-- 下次再做这个功能 <input>全选 反选 默认 -->
+    <div id="chaohualist">
+    
+    </div>
 </body>
 </html>
